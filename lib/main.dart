@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Shop',
+      themeMode: ThemeMode.system,
       theme: AppTheme.lightTheme(context),
+      darkTheme: AppTheme.darkTheme(context),
       initialRoute: SplashScreen.routeName,
       routes: routes,
     );

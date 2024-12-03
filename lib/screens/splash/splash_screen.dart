@@ -83,7 +83,10 @@ class _SplashScreenState extends State<SplashScreen> {
                         onPressed: () {
                           Navigator.pushNamed(context, SignInScreen.routeName);
                         },
-                        child: const Text("Continue"),
+                        child: const Text(
+                          "Continue",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ),
                       const Spacer(),
                     ],
