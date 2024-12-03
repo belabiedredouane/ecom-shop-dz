@@ -23,7 +23,7 @@ class ProductDescription extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text(
             product.title,
-            style: Theme.of(context).textTheme.titleLarge,
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(color: Theme.of(context).primaryColorLight),
           ),
         ),
         Align(
@@ -64,7 +64,7 @@ class ProductDescription extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 20,
-            vertical: 12,
+            vertical:12,
           ),
           child: GestureDetector(
             onTap: () {},

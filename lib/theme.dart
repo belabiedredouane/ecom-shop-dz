@@ -16,11 +16,12 @@ class AppTheme {
           elevation: 0,
           iconTheme: IconThemeData(color: Colors.black),
           titleTextStyle: TextStyle(color: Colors.black)),
-      textTheme: const TextTheme(
-        bodyLarge: TextStyle(color: kTextColor),
-        bodyMedium: TextStyle(color: kTextColor),
-        bodySmall: TextStyle(color: kTextColor),
-        labelLarge: TextStyle(color: Colors.black54),
+      textTheme:  TextTheme(
+        bodyLarge: const TextStyle(color: kTextColor),
+        bodyMedium: const TextStyle(color: kTextColor),
+        bodySmall: const TextStyle(color: kTextColor),
+        labelLarge: const TextStyle(color: Colors.black54),
+        titleLarge: Theme.of(context).textTheme.titleLarge!.copyWith(color: kTextColor),
       ),
       inputDecorationTheme: const InputDecorationTheme(
         floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -63,11 +64,12 @@ class AppTheme {
           elevation: 0,
           iconTheme: IconThemeData(color: Colors.white),
           titleTextStyle: TextStyle(color: Colors.white)),
-      textTheme: const TextTheme(
-        bodyLarge: TextStyle(color: Colors.white),
-        bodyMedium: TextStyle(color: Colors.white),
-        bodySmall: TextStyle(color: Colors.white),
-        labelLarge: TextStyle(color: Colors.white54),
+      textTheme:  TextTheme(
+        bodyLarge: const TextStyle(color: Colors.white),
+        bodyMedium: const TextStyle(color: Colors.white),
+        bodySmall: const TextStyle(color: Colors.white),
+        labelLarge: const TextStyle(color: Colors.white54),
+        titleLarge: Theme.of(context).textTheme.titleLarge!.copyWith(color: Colors.white),
       ),
        inputDecorationTheme: const InputDecorationTheme(
        floatingLabelBehavior: FloatingLabelBehavior.always,

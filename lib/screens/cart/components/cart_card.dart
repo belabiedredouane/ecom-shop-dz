@@ -35,7 +35,7 @@ class CartCard extends StatelessWidget {
           children: [
             Text(
               cart.product.title,
-              style: const TextStyle(color: Colors.black, fontSize: 16),
+              style:  TextStyle(color: Theme.of(context).primaryColorLight, fontSize: 16),
               maxLines: 2,
             ),
             const SizedBox(height: 8),

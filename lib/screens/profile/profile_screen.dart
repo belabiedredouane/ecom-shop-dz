@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/screens/profile/theme/theme_screen.dart';
 
 import 'components/profile_menu.dart';
 import 'components/profile_pic.dart';
@@ -30,9 +31,11 @@ class ProfileScreen extends StatelessWidget {
               press: () {},
             ),
             ProfileMenu(
-              text: "Settings",
+              text: "Theme",
               icon: "assets/icons/Settings.svg",
-              press: () {},
+              press: (){
+                Navigator.of(context).pushNamed(ThemeScreen.routeName);
+              },
             ),
             ProfileMenu(
               text: "Help Center",

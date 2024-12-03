@@ -21,7 +21,6 @@ class DetailsScreen extends StatelessWidget {
     return Scaffold(
       extendBody: true,
       extendBodyBehindAppBar: true,
-      backgroundColor: const Color(0xFFF5F6F9),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -78,7 +77,7 @@ class DetailsScreen extends StatelessWidget {
         children: [
           ProductImages(product: product),
           TopRoundedContainer(
-            color: Colors.white,
+            color: Theme.of(context).scaffoldBackgroundColor,
             child: Column(
               children: [
                 ProductDescription(
@@ -86,7 +85,7 @@ class DetailsScreen extends StatelessWidget {
                   pressOnSeeMore: () {},
                 ),
                 TopRoundedContainer(
-                  color: const Color(0xFFF6F7F9),
+                  color: Theme.of(context).scaffoldBackgroundColor,
                   child: Column(
                     children: [
                       ColorDots(product: product),
@@ -99,7 +98,7 @@ class DetailsScreen extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: TopRoundedContainer(
-        color: Colors.white,
+        color: Theme.of(context).scaffoldBackgroundColor,
         child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import 'provider/theme_provider.dart';
 import 'routes.dart';
 import 'screens/splash/splash_screen.dart';
 import 'theme.dart';
@@ -14,14 +16,23 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Shop',
-      themeMode: ThemeMode.system,
-      theme: AppTheme.lightTheme(context),
-      darkTheme: AppTheme.darkTheme(context),
-      initialRoute: SplashScreen.routeName,
-      routes: routes,
-    );
+    
+    return MultiProvider(
+        providers: [
+          ChangeNotifierProvider<ThemeProvider>(
+              create: (context) => ThemeProvider()),
+        ],
+        builder: (context, child) {
+          final themeProvider = Provider.of<ThemeProvider>(context);
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Shop',
+            themeMode: themeProvider.themeMode,
+            theme: AppTheme.lightTheme(context),
+            darkTheme: AppTheme.darkTheme(context),
+            initialRoute: SplashScreen.routeName,
+            routes: routes,
+          );
+        });
   }
 }
