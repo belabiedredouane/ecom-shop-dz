@@ -6,6 +6,7 @@ class AppTheme {
   static ThemeData lightTheme(BuildContext context) {
     return ThemeData(
       primaryColor: const Color(0xFF979797).withOpacity(0.1),
+      canvasColor: kSecondaryColor.withOpacity(0.1),
       scaffoldBackgroundColor: Colors.white,
       fontFamily: "Muli",
       appBarTheme: const AppBarTheme(
@@ -17,13 +18,13 @@ class AppTheme {
         bodyLarge: TextStyle(color: kTextColor),
         bodyMedium: TextStyle(color: kTextColor),
         bodySmall: TextStyle(color: kTextColor),
+        labelLarge: TextStyle(color: Colors.black54),
       ),
       inputDecorationTheme: const InputDecorationTheme(
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        contentPadding: EdgeInsets.symmetric(horizontal: 42, vertical: 20),
-        enabledBorder: outlineInputBorder,
-        focusedBorder: outlineInputBorder,
-        border: outlineInputBorder,
+        contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+        fillColor: Color(0xFFF4F4F4),
+        filled: true,
       ),
       visualDensity: VisualDensity.adaptivePlatformDensity,
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -50,6 +51,7 @@ class AppTheme {
   static ThemeData darkTheme(BuildContext context) {
     return ThemeData(
       primaryColor: Colors.white,
+      canvasColor: const Color(0xFF342F3F),
       scaffoldBackgroundColor: const Color(0XFF1D182A),
       fontFamily: "Muli",
       appBarTheme: const AppBarTheme(
@@ -61,14 +63,14 @@ class AppTheme {
         bodyLarge: TextStyle(color: Colors.white),
         bodyMedium: TextStyle(color: Colors.white),
         bodySmall: TextStyle(color: Colors.white),
+        labelLarge: TextStyle(color: Colors.white54),
       ),
-      inputDecorationTheme: const InputDecorationTheme(
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-        contentPadding: EdgeInsets.symmetric(horizontal: 42, vertical: 20),
-        enabledBorder: outlineInputBorder,
-        focusedBorder: outlineInputBorder,
-        border: outlineInputBorder,
-      ),
+       inputDecorationTheme: const InputDecorationTheme(
+       floatingLabelBehavior: FloatingLabelBehavior.always,
+        contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+        fillColor: Color(0xFF342F3F),
+        filled: true,
+      ), 
       visualDensity: VisualDensity.adaptivePlatformDensity,
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -88,6 +90,7 @@ class AppTheme {
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(foregroundColor: Colors.white),
       ),
+      iconTheme: const IconThemeData(color: Colors.white)
     );
   }
 }
@@ -95,5 +98,11 @@ class AppTheme {
 const OutlineInputBorder outlineInputBorder = OutlineInputBorder(
   borderRadius: BorderRadius.all(Radius.circular(28)),
   borderSide: BorderSide(color: kTextColor),
+  gapPadding: 10,
+);
+
+const OutlineInputBorder outlineInputBorderDark = OutlineInputBorder(
+  borderRadius: BorderRadius.all(Radius.circular(28)),
+  borderSide: BorderSide(color: Colors.grey),
   gapPadding: 10,
 );

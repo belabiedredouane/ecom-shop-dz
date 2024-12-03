@@ -64,13 +64,14 @@ class SignFormState extends State<SignForm> {
               }
               return null;
             },
-            decoration: const InputDecoration(
-              labelText: "Email",
+            decoration: InputDecoration(
               hintText: "Enter your email",
+              hintStyle: Theme.of(context).textTheme.labelLarge,
               // If  you are using latest version of flutter then lable text and hint text shown like this
               // if you r using flutter less then 1.20.* then maybe this is not working properly
               floatingLabelBehavior: FloatingLabelBehavior.always,
-              suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
+              suffixIcon:
+                  const CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
             ),
           ),
           const SizedBox(height: 20),
@@ -95,13 +96,14 @@ class SignFormState extends State<SignForm> {
               }
               return null;
             },
-            decoration: const InputDecoration(
-              labelText: "Password",
+            decoration: InputDecoration(
               hintText: "Enter your password",
+              hintStyle: Theme.of(context).textTheme.labelLarge,
               // If  you are using latest version of flutter then lable text and hint text shown like this
               // if you r using flutter less then 1.20.* then maybe this is not working properly
               floatingLabelBehavior: FloatingLabelBehavior.always,
-              suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
+              suffixIcon:
+                  const CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
             ),
           ),
           const SizedBox(height: 20),
@@ -139,7 +141,12 @@ class SignFormState extends State<SignForm> {
                 Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
-            child: const Text("Continue"),
+            child: const Text(
+              "Continue",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
         ],
       ),

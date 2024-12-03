@@ -51,13 +51,13 @@ class ForgotPassFormState extends State<ForgotPassForm> {
               }
               return null;
             },
-            decoration: const InputDecoration(
-              labelText: "Email",
+            decoration:  InputDecoration(
               hintText: "Enter your email",
+              hintStyle: Theme.of(context).textTheme.labelLarge,
               // If  you are using latest version of flutter then lable text and hint text shown like this
               // if you r using flutter less then 1.20.* then maybe this is not working properly
               floatingLabelBehavior: FloatingLabelBehavior.always,
-              suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
+              suffixIcon: const CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
             ),
           ),
           const SizedBox(height: 8),
@@ -69,7 +69,11 @@ class ForgotPassFormState extends State<ForgotPassForm> {
                 // Do what you want to do
               }
             },
-            child: const Text("Continue"),
+            child: const Text("Continue",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+              ),
           ),
           const SizedBox(height: 16),
           const NoAccountText(),
