@@ -6,6 +6,8 @@ class AppTheme {
   static ThemeData lightTheme(BuildContext context) {
     return ThemeData(
       primaryColor: const Color(0xFF979797).withOpacity(0.1),
+      primaryColorDark: Colors.black,
+      primaryColorLight: Colors.black,
       canvasColor: kSecondaryColor.withOpacity(0.1),
       scaffoldBackgroundColor: Colors.white,
       fontFamily: "Muli",
@@ -51,6 +53,8 @@ class AppTheme {
   static ThemeData darkTheme(BuildContext context) {
     return ThemeData(
       primaryColor: Colors.white,
+      primaryColorDark: const Color(0xFF979797).withOpacity(0.1),
+      primaryColorLight: Colors.white,
       canvasColor: const Color(0xFF342F3F),
       scaffoldBackgroundColor: const Color(0XFF1D182A),
       fontFamily: "Muli",

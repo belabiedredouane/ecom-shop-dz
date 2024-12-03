@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../constants.dart';
-
 class ProfileMenu extends StatelessWidget {
   const ProfileMenu({
     super.key,
@@ -20,17 +18,17 @@ class ProfileMenu extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: TextButton(
         style: TextButton.styleFrom(
-          foregroundColor: kPrimaryColor, padding: const EdgeInsets.all(20),
+          foregroundColor: Theme.of(context).primaryColorLight, padding: const EdgeInsets.all(20),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-          backgroundColor: const Color(0xFFF5F6F9),
+          backgroundColor: Theme.of(context).canvasColor,
         ),
         onPressed: press,
         child: Row(
           children: [
             SvgPicture.asset(
               icon,
-              colorFilter: const ColorFilter.mode(kPrimaryColor, BlendMode.srcIn),
+              colorFilter:  ColorFilter.mode(Theme.of(context).primaryColorLight, BlendMode.srcIn),
               width: 22,
             ),
             const SizedBox(width: 20),

@@ -29,7 +29,11 @@ class IconBtnWithCounter extends StatelessWidget {
               color: Theme.of(context).canvasColor,
               shape: BoxShape.circle,
             ),
-            child: SvgPicture.asset(svgSrc),
+            child: SvgPicture.asset(
+              svgSrc,
+              colorFilter:
+                   ColorFilter.mode(Theme.of(context).primaryColorDark, BlendMode.srcIn),
+            ),
           ),
           if (numOfitem != 0)
             Positioned(
